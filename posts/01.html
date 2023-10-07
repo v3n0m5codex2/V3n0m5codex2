@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+<title>COD3X BLOG</title>
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+
+<body id="top">
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- Top Background Image Wrapper -->
+	<div class="bgded overlay" style="background-image:url('images/live/backgrounds/01.png');"> 
+	  <!-- ################################################################################################ -->
+	  <header id="header" class="hoc clear"> 
+		<!-- ################################################################################################ -->
+		<div id="logo" class="one_quarter first">
+		  <h1><a href="https://www.viper-kernel.tech///posts/index.html">ViP3R KERNELs</a></h1>
+		  <p>Build For Kali NetHunter</p>
+		</div>
+		<!-- ################################################################################################ -->
+	  </header>
+	  <!-- ################################################################################################ -->
+	  <!-- ################################################################################################ -->
+	  <!-- ################################################################################################ -->
+	  <section id="navwrapper" class="hoc clear"> 
+		<!-- ################################################################################################ -->
+		<nav id="mainav">
+		  <ul class="clear">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../pages/downloads.html">Downloads</a></li>
+			<li><a href="../index.html#request">Request a Device</a>
+			<li><a href="https://www.viper-kernel.tech///pages/SupportedDevice.html">Devices</a></li>
+			<li><a class="drop" href="01.html#">Support Us</a>
+			  <ul>
+				<li><a href="https://www.buymeacoffee.com/iamcoder">Buy Me a Coffee</a></li>
+				<li><a href="https://ko-fi.com/iamcod3x">Buy Me a Ko-Fi</a></li>
+				<li><a href="https://www.paypal.me/IamCODER">PayPal</a></li>
+			  </ul>
+              <li><a href="https://www.viper-kernel.tech////blog.html">My Blog</a></li>
+			<li><a href="https://www.viper-kernel.tech////about.html">About Us</a></li>
+		  </ul>
+		</nav>
+		<!-- ################################################################################################ -->
+		<div id="searchform">
+		  <div>
+			<form action="01.html#" method="post">
+			  <fieldset>
+				<legend>Quick Search:</legend>
+				<input type="text" placeholder="Enter Device Name&hellip;">
+				<button type="submit"><i class="fas fa-search"></i></button>
+			  </fieldset>
+			</form>
+		  </div>
+		</div>
+		<!-- ################################################################################################ -->
+	  </section>
+    <div class="wrapper row3">
+        <main class="hoc container clear"> 
+          <!-- main body -->
+          <!-- ################################################################################################ -->
+          <div class="sidebar one_quarter first"> 
+            <!-- ################################################################################################ -->
+            <h6>Contents</h6>
+            <nav class="sdb_holder">
+              <ul>
+				<li><a href="01.html#Intro">Introduction</a></li>
+				<li><a href="01.html#Pre">Prerequisites</a></li>
+                <li><a href="01.html#winmac">Setup your Windows Machine</a></li>
+                <li><a href="01.html#linmac">Setup your Linux Machine</a></li>
+                <li><a href="01.html#GD">Gathering Device Info and Source</a></li>
+                <li><a href="01.html#CP">The Compiling Process</a></li>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="01.html#TT">Testing Your Kernel</a></li>
+              </ul>
+			</nav>
+
+			<!-- ################################################################################################ -->
+		  </div>
+
+	<!-- BLOG BODY-->
+	<div class="content three_quarter"> 
+		<!-- ################################################################################################ -->
+		<h1>How to Build Your Own Android Kernel</h1>
+		<h1><a name="Intro">Introduction</a></h1>
+		<h1>What is Android Kernel</h1>
+		<img class="imgr borderedbox inspace-5" src="images/files/Android.gif" alt="">
+		<p>On an Android, a kernel is the core program that manages the CPU resources, the system memory, the system devices, including the file systems and networking, and is responsible for managing all the processes.</p>
+		<h1>Why Kernel is Important!</h1>
+		<p>It basically manages operations of memory and CPU time. It is core component of an operating system. Kernel acts as a bridge between applications and data processing performed at hardware level using inter-process communication and system calls.</p>
+		<br>
+		<h1><a name="Pre">Prerequisites</a></h1>
+		<p>1.A Computer & Internet <br> 2.Little C Knowledge <br> 3.Common Sense :) </p>
+
+		<h1>Lets Begin</h1>
+		<h1><a name="winmac">Setup your Windows Machine</a></h1>
+		<p>Download <a href="https://www.vmware.com/in.html" target="_blank">VMWare</a> or <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a> for setup the guest Machine.</p>
+		<p>Then Download Linux ISO File. Note. Suggested Linux:<a href="https://ubuntu.com/" target="_blank">Ubuntu</a> or <a href="https://www.kali.org/" target="_blank">Kali Linux</a></p>
+		<p>Create a new Virtual Machine using this guide <a href="https://youtu.be/7r6jll6lgaI" target="_blank">How to make a New Virtual Machine</a> <br> If you know how to create a Virtual Machine then skip this step.</p>
+		<h1><a name="linmac">Setup your Linux Machine</a></h1>
+		<p>Now Turn ON your Virtual Machine and setup initial things like account and stuff.</p>
+		<p>After doing all first boot initial things... <b>Now the main part starts...</b></p>
+		<p>After that run this in your sudo terminal <b>apt install default-jdk git-core gnupg flex bison gperf build-essential zip curl libc6-dev libncurses5-dev x11proto-core-dev libx11-dev libreadline6-dev libgl1-mesa-glx libgl1-mesa-dev python3 make sudo gcc g++ bc grep tofrodos python3-markdown libxml2-utils xsltproc zlib1g-dev</b></p>
+		<h1><a Name="GD">Gathering Device Info and Source</a></h1>
+		<p>Now Start gathering your device details like Codename, Processor, Board, etc.</p>
+		<p>There are few ways through which you can find these things and the simplest way is using a simple app name <a href="https://play.google.com/store/apps/details?id=com.cpuid.cpu_z&hl=en_IN&gl=US" target="_blank">CPU-Z.</a></p>
+		<P>After gathering device details, Now you need to find kernel source code for your device over the internet <br>I suggest you to first go through the github repos to find your device's Kernel source code. <br> 
+		Usually developers use a name format to name their repo's on github like <b>android_kernel_brand_codename</b> <b><br> For example "android_kernel_xiaomi_dior"</b></P>
+		<p>Now select the branch of your desired Android Version like Pie, Q , R , S , T and copy the git repo code and keep noted the branch name <br> 
+		Now Open Terminal in your Linux and Make a folder named Kernel using <b>mkdir Kernel</b> command and <b>cd Kernel</b>. <br> Now type <b>git clone (git repo code) -b (branch name)</b> 
+		<br>For Example <b>git clone https://github.com/PixelExperience-Devices/device_xiaomi_begonia.git -b twelve</b> </p>
+		<P>If it shows an error like git not found or something.. use <b>sudo apt install git</b> to install git. 
+			<br> After downloading kernel source you need to download few more files like <br>
+			<b><a href="https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel.git">Kali Nethunter Kernel Builder Gitlab Repo</a></b> <br>
+			<b><a href="https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project.git">Kali Nethunter Installer Gitlab Repo</a></b> 
+			<br> and In Installer folder run the bootstrap.sh to sync the devices. 
+			<br>Now copy the Kali Nethunter Kernel Folder in your Kernel Source <br> And go to Nethunter Install then Run the build.sh using <b>bash build.sh</b> 
+			<br>
+			<br>After running the script.. <b>Setup the environment and Download Toolchains</b></p>
+			<img src="images/files/Kali.png">
+			<p><br></p>
+			<h1><a Name="CP">The Compiling Process</a></h1>
+
+			<p><b>After setuping</b> the environment, Patch your kernel source by choosing options of your kernel version 
+				<br>
+				<br>Know your kernel version by running <b>make kernelversion</b> in terminal at device kernel source folder.
+				<br>Now it's time to edit the defconfig file by choosing the <b>Edit Default Kernel Config</b> in build Menu.
+				<br>Use this <a href="https://www.kali.org/docs/nethunter/porting-nethunter-kernel-builder/">guide</a> to edit the Kernel Config.
+			</p> 
+			<img src="images/files/kernel.png">
+			<p><br></p>
+			<p><b>After Editing and Saving the defconfig.</b> 
+				<br> Go back to the Build Main Menu and choose option 2 to compile your kernel from Scratch.
+				<br> You can also use your own custom building script to make the process easy.
+				<br> I'm sharing you<a href="https://github.com/IamCOD3X/Android-Kernel-Compiling-Stuff.git">My compiling Scripts and Stuff.</a>
+				<br> If you face any error comment us. We will try to figure it out.</p>
+			<p>
+				If the compilation is successful then copy your modules and Image from <b>Out and Module_Out</b> folder.
+				<br>Note: Warnings can be ignored.
+				<br>Paste the modules and Image in Kali Nethunter Project folder to add your device by reading the documentation.
+				<br>And now just pack the Kernel using Python3 Build Script in kali-nethunter-project folder.
+				<h1>CONGRATULATIONS. You Have Successfully Build your Own Android Kernel</h1>
+
+			</p>
+			
+			<h1><a Name="TT">Testing Your Kernel</a></h1>
+			<p>Go to TWRP and Take Backup of your current Boot Partition <br>
+				 Then flash your new Kernel.zip
+				<br>Note. First Boot may take time so be patient</p>
+
+			<h1>Common Errors<h1>
+				<p>
+					<h1>as: unrecognized option '-EL</h1>
+
+					Usually, this means that `CROSS_COMPILE` is not set correctly. Check that variable as well as your `PATH` to make sure that the required tools are available for Clang to invoke. You can test it manually like tihs:
+					<br>
+					$ ${CROSS_COMPILE}ld -v <br>
+					GNU ld (GNU Binutils) 2.34 <br>
+					
+					If you see `Command not found` or any other error, one of the two variables mentioned above is most likely set incorrectly.
+					
+					If you continue to encounter this error after verifying `CROSS_COMPILE` and `PATH`, you are probably running into a change in Clang 12's handling of cross-compiling. <br> 
+					The fix is to either merge linux-stable (which already has the fix included) cherry-pick <a href="https://github.com/kdrag0n/proton_zf6/commit/6e87fec9a3df5">"Makefile: Fix GCC_TOOLCHAIN_DIR prefix for Clang cross compilation"</a> manually. <br>
+					
+					If the error still continues to appear and you have an arm64 kernel that includes vdso32, you will also need to cherry-pick <a href="https://github.com/kdrag0n/proton_zf6/commit/68acd6966ac98">arm64: vdso32: Fix '--prefix=' value for newer versions of clang</a> to fix the second vdso32 error. Merging linux-stable is also an option if you are on Linux 5.4 or newer.
+					<h2>&nbsp;</h2>
+					<h1>Cannot use CONFIG_CC_STACKPROTECTOR_STRONG: -fstack-protector-strong not supported by compiler</h1>
+					
+					This error is actually a result of stack protector checks in the Makefile that cause the real error to be masked. <br>
+					It indicates that one or more unsupported compiler flags have been passed to Clang. Disable <b> CONFIG_CC_STACKPROTECTOR_STRONG` </b> in favor of <b> `CONFIG_CC_STACKPROTECTOR_NONE`</b> temporarily (make sure you don't keep this change permanently for security reasons) and Clang will output the flag that is causing the problem. <br>
+					
+					In downstream kernels, the cause is usually big.LITTLE CPU optimization flags that have been added to the Makefile unconditionally. The correct solution is to check `cc-name` for the current compiler and adjust the optimization flags accordingly — big.LITTLE for GCC and little-only for Clang. See <a href="https://github.com/kdrag0n/proton_zf6/commit/f45e4ffbecd1c059aa49d8a119b50ee84d7f9d0f">["Makefile: Optimize for sm8150's Kryo 485 CPU setup"]</a>for an example implementation of this.
+					<h2>&nbsp;</h2>
+					<h1>scripts/gcc-version.sh: line 25: aarch64-linux-gnu-gcc: command not found</h1>
+					
+					This is caused by unconditional invocations of <b> `gcc-version.sh`</b> in CAF's camera_v2 driver. The recommended solution is to cherry-pick <a href="https://android.googlesource.com/kernel/msm/+/9b3a54e388fae0fcc5ea64a4c612936baae44fce">[Google's fix]</a>from the Pixel 2 kernel, which simply removes the faulty invocations as they were never useful to begin with.
+					
+					Note that these errors are harmless and don't necessarily need to be fixed, but nonetheless, ignoring them is not recommended.
+					<h2>&nbsp;</h2>
+					<h1>undefined reference to 'stpcpy' </h1>
+					
+					This is caused by a libcall optimization added in Clang 12 that optimizes certain basic `sprintf` calls into `stpcpy` calls. The correct fix for this is to cherry-pick <a href="https://github.com/kdrag0n/proton_zf6/commit/cec73f0775526">["lib/string.c: implement stpcpy"]</a>, which adds a simple implementation of `stpcpy` to the kernel so that Clang can use it.</p>
+					
+			<!-- ##############################  COMMENTS  ############################################ -->
+			<div class="commentbox"></div>
+			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+			<script>commentBox('5749850733805568-proj')</script>
+		  <!-- ################################################################################################ -->
+	  <!-- / main body -->
+	  <div class="clear"></div>
+	</main>
+  </div>
+
+<footer id="footer" class="hoc clear"> 
+<div class="center btmspace-50">
+    <h6 class="heading">ViP3R KERNELs</h6>
+    <ul class="faico clear">
+        <li><a class="faicon-facebook" href="https://www.facebook.com/imcoderX/"  target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-github" href="https://www.github.com/IamCOD3X" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/sourabh-panchal/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="https://twitter.com/__DECODER__" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-telegram" href="https://t.me/ViPER_KERNELs" target="_blank"><i class="fab fa-telegram"></i></a></li>
+		<li><a class="faicon-youtube" href="https://www.youtube.com/@MidnightStudioz" target="_blank"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+    <p class="nospace">Build For Android with Love ❤️</p>
+    </div>
+</footer>
+</div>  
+<div class="wrapper row5">
+<div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - <a href="../pages/TermsConditions.html">ViPER_KERNELs </a></p>
+    <p class="fl_right">Made By👻 <a target="_blank" href="https://github.com/IamCOD3X" title="Cybersecurity Enthusiast">IamCOD3X</a></p>
+    <!-- ################################################################################################ -->
+</div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="01.html#top"><i class="fas fa-chevron-up"></i></a>
+		
+		<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+
+</body>
+</html>
